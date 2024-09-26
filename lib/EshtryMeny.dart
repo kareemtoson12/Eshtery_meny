@@ -18,7 +18,7 @@ class EshtryMeny extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         onGenerateRoute: appRouter.gnerateRoute,
-        initialRoute: Routes.resetpassword,
+        initialRoute: Routes.onboardingScreen,
       ),
     );
   }

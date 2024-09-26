@@ -1,3 +1,4 @@
+import 'package:eshtry_meny/shared/routing/routes.dart';
 import 'package:eshtry_meny/shared/styles/colors.dart';
 import 'package:eshtry_meny/shared/styles/styles.dart';
 
@@ -88,6 +89,15 @@ class LoginScreen extends StatelessWidget {
                       ],
                     ),
                     nextButton('Login'),
+                    TextButton(
+                        onPressed: () {
+                          Navigator.of(context)
+                              .pushReplacementNamed(Routes.signUPScreen);
+                        },
+                        child: Text(
+                          'Don’t haven an account ? Signup',
+                          style: AppTextStyles.font20blackRegular,
+                        ))
                   ],
                 ),
               ),

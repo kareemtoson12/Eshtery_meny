@@ -1,3 +1,4 @@
+import 'package:eshtry_meny/shared/routing/routes.dart';
 import 'package:eshtry_meny/shared/styles/styles.dart';
 import 'package:eshtry_meny/shared/widgets/custom_app_bar.dart';
 import 'package:eshtry_meny/shared/widgets/text_field_scoial.dart';
@@ -88,11 +89,17 @@ class SignUpScreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        TextButton(
-                          onPressed: () {},
-                          child: Text(
-                            'Already have an account ? Login ?',
-                            style: AppTextStyles.font20blackRegular,
+                        Padding(
+                          padding: EdgeInsets.only(left: 15.dg),
+                          child: TextButton(
+                            onPressed: () {
+                              Navigator.of(context)
+                                  .pushReplacementNamed(Routes.loginScreen);
+                            },
+                            child: Text(
+                              'Already have an account ? Login ?',
+                              style: AppTextStyles.font20blackRegular,
+                            ),
                           ),
                         ),
                       ],
