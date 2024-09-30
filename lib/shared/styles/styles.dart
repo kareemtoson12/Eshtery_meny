@@ -21,6 +21,11 @@ class AppTextStyles {
     fontWeight: FontWeight.w300,
     color: Colors.white,
   );
+  static TextStyle font13WhiteRegular = TextStyle(
+    fontSize: 13.sp,
+    fontWeight: FontWeight.w700,
+    color: CustomsColros.gray,
+  );
   static TextStyle font18GrayRegular = TextStyle(
     fontSize: 15.sp,
     fontWeight: FontWeight.w400,
@@ -34,6 +39,11 @@ class AppTextStyles {
   static TextStyle font20blackRegular = TextStyle(
     fontSize: 15.sp,
     fontWeight: FontWeight.w400,
+    color: Colors.black,
+  );
+  static TextStyle font15blackbold = TextStyle(
+    fontSize: 15.sp,
+    fontWeight: FontWeight.bold,
     color: Colors.black,
   );
   static TextStyle font25blackRegular = TextStyle(
