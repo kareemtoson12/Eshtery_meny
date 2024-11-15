@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 PreferredSizeWidget customAppBar(titleHdear, subTitle) {
   return PreferredSize(
-    preferredSize: Size.fromHeight(160.h),
+    preferredSize: Size.fromHeight(130.h),
     child: AppBar(
       backgroundColor: CustomsColros.primaryColor,
       shape: const RoundedRectangleBorder(
