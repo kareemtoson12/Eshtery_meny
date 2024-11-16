@@ -1,3 +1,8 @@
+class ApiConstants {
+  static const String baseUrl = 'http://pazzify.runasp.net/';
+  static const String signUp = 'User/Add-User';
+}
+
 class ApiErrors {
   static const String badRequestError = "badRequestError";
   static const String noContent = "noContent";

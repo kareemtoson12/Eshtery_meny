@@ -1,7 +1,8 @@
 import 'package:eshtry_meny/shared/routing/routes.dart';
 import 'package:eshtry_meny/shared/styles/styles.dart';
+import 'package:eshtry_meny/shared/widgets/continoue_with_social.dart';
 import 'package:eshtry_meny/shared/widgets/custom_app_bar.dart';
-import 'package:eshtry_meny/shared/widgets/text_field_scoial.dart';
+
 import 'package:eshtry_meny/shared/widgets/text_fild.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -24,26 +25,14 @@ class SignUpScreen extends StatelessWidget {
                   children: [
                     Padding(
                       padding: EdgeInsets.only(
-                        top: 25.dm,
-                        bottom: 15.dm,
+                        top: 20.dm,
+                        bottom: 10.dm,
                         left: 20.dm,
                         right: 20.dm,
                       ),
-                      child: const CsutomTextFiledSocial(
-                        prefexIcon: 'assets/pngimages/googleIcon.png',
-                        textOftextField: 'Continue with Google',
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(
-                        top: 15.dm,
-                        bottom: 15.dm,
-                        left: 20.dm,
-                        right: 20.dm,
-                      ),
-                      child: const CsutomTextFiledSocial(
-                        prefexIcon: 'assets/pngimages/facebookIcon.png',
-                        textOftextField: 'Continue with Facebook',
+                      child: const ContinoueWithSocial(
+                        iamgePath: 'assets/pngimages/googleIcon.png',
+                        socialMediaName: 'Continue with Google',
                       ),
                     ),
                     Text(
@@ -53,7 +42,19 @@ class SignUpScreen extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.only(
                         top: 8.dm,
-                        bottom: 20.dm,
+                        bottom: 10.dm,
+                        left: 20.dm,
+                        right: 20.dm,
+                      ),
+                      child: const CsutomTextFiled(
+                        prefexIcon: Icon(Icons.person),
+                        textOftextField: 'Username',
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(
+                        top: 8.dm,
+                        bottom: 10.dm,
                         left: 20.dm,
                         right: 20.dm,
                       ),
@@ -76,14 +77,14 @@ class SignUpScreen extends StatelessWidget {
                     ),
                     Padding(
                       padding: EdgeInsets.only(
-                        top: 20.dm,
+                        top: 10.dm,
                         bottom: 0.dm,
                         left: 20.dm,
                         right: 20.dm,
                       ),
                       child: const CsutomTextFiled(
-                        prefexIcon: Icon(Icons.lock),
-                        textOftextField: 'Confirm password',
+                        prefexIcon: Icon(Icons.phone),
+                        textOftextField: 'phone number',
                       ),
                     ),
                     Row(
