@@ -5,10 +5,13 @@ import 'package:eshtry_meny/characteristic/otpVerification/otp_screen1.dart';
 import 'package:eshtry_meny/characteristic/otpVerification/otp_screen2.dart';
 import 'package:eshtry_meny/characteristic/productDetails/product_details_screen.dart';
 import 'package:eshtry_meny/characteristic/resetpassword/resetPassword.dart';
+import 'package:eshtry_meny/characteristic/signup/logic/cubit/signup_cubit.dart';
 import 'package:eshtry_meny/characteristic/signup/sign_up_screen.dart';
 import 'package:eshtry_meny/characteristic/splash/splash_screen.dart';
+import 'package:eshtry_meny/shared/di/dependency_injection.dart';
 import 'package:eshtry_meny/shared/routing/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AppRoutes {
   Route? gnerateRoute(RouteSettings settings) {
@@ -17,8 +20,13 @@ class AppRoutes {
         return MaterialPageRoute(builder: (context) => const LoginScreen());
 
       case Routes.signUPScreen:
-        return MaterialPageRoute(builder: (context) => const SignUpScreen());
-
+        // Fixed the syntax issue: `getit` should be `GetIt` if you're using the GetIt package
+        return MaterialPageRoute(
+          builder: (context) => BlocProvider(
+            create: (context) => getit<SignupCubit>(), // Fix GetIt usage
+            child: SignUpScreen(),
+          ),
+        );
       case Routes.otpScreen1:
         return MaterialPageRoute(builder: (context) => const OtpScreen1());
 

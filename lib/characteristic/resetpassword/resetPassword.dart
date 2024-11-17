@@ -34,19 +34,21 @@ class ResetpasswordScreen extends StatelessWidget {
                 height: 90.h,
               ),
               Padding(
-                padding: EdgeInsets.all(8.0.dg),
-                child: const CsutomTextFiled(
+                  padding: EdgeInsets.all(8.0.dg),
+                  child:
+                      null /*  const CsutomTextFiled(
                   prefexIcon: Icon(Icons.lock),
                   textOftextField: 'Password',
-                ),
-              ),
+                ), */
+                  ),
               Padding(
-                padding: EdgeInsets.all(8.0.dg),
-                child: const CsutomTextFiled(
+                  padding: EdgeInsets.all(8.0.dg),
+                  child:
+                      null /*  const CsutomTextFiled(
                   prefexIcon: Icon(Icons.lock),
                   textOftextField: 'Password',
-                ),
-              ),
+                ), */
+                  ),
               SizedBox(
                 height: 100.h,
               ),

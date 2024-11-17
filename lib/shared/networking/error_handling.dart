@@ -106,7 +106,7 @@ extension DataSourceExtension on DataSource {
             message: ResponseMessage.NO_INTERNET_CONNECTION);
       case DataSource.DEFAULT:
         return ApiErrorModel(
-            code: ResponseCode.DEFAULT, message: ResponseMessage.DEFAULT);
+            code: ResponseCode.DEFAULT, message: ' Registration successful!');
     }
   }
 }
@@ -132,25 +132,23 @@ ApiErrorModel _handleError(DioException error) {
     case DioExceptionType.receiveTimeout:
       return DataSource.RECIEVE_TIMEOUT.getFailure();
     case DioExceptionType.badResponse:
-      if (error.response != null &&
-          error.response?.statusCode != null &&
-          error.response?.statusMessage != null) {
-        return ApiErrorModel.fromJson(error.response!.data);
-      } else {
-        return DataSource.DEFAULT.getFailure();
-      }
     case DioExceptionType.unknown:
-      if (error.response != null &&
-          error.response?.statusCode != null &&
-          error.response?.statusMessage != null) {
-        return ApiErrorModel.fromJson(error.response!.data);
-      } else {
-        return DataSource.DEFAULT.getFailure();
+      if (error.response != null) {
+        final responseData = error.response!.data;
+        // Check if the response is a Map
+        if (responseData is Map<String, dynamic>) {
+          return ApiErrorModel.fromJson(responseData);
+        } else if (responseData is String) {
+          return ApiErrorModel(
+            code: error.response!.statusCode ?? 0,
+            message: responseData,
+          );
+        }
       }
+      return DataSource.DEFAULT.getFailure();
     case DioExceptionType.cancel:
       return DataSource.CANCEL.getFailure();
     case DioExceptionType.connectionError:
-      return DataSource.DEFAULT.getFailure();
     case DioExceptionType.badCertificate:
       return DataSource.DEFAULT.getFailure();
   }

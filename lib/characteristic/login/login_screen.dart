@@ -54,29 +54,31 @@ class LoginScreen extends StatelessWidget {
                       style: AppTextStyles.font20PurpuleRegular,
                     ),
                     Padding(
-                      padding: EdgeInsets.only(
-                        top: 8.dm,
-                        bottom: 20.dm,
-                        left: 20.dm,
-                        right: 20.dm,
-                      ),
-                      child: const CsutomTextFiled(
-                        prefexIcon: Icon(Icons.email),
-                        textOftextField: 'Email',
-                      ),
-                    ),
+                        padding: EdgeInsets.only(
+                          top: 8.dm,
+                          bottom: 20.dm,
+                          left: 20.dm,
+                          right: 20.dm,
+                        ),
+                        child:
+                            null /*  const CsutomTextFiled(
+                  prefexIcon: Icon(Icons.lock),
+                  textOftextField: 'Password',
+                ), */
+                        ),
                     Padding(
-                      padding: EdgeInsets.only(
-                        top: 2.dm,
-                        bottom: 0.dm,
-                        left: 20.dm,
-                        right: 20.dm,
-                      ),
-                      child: const CsutomTextFiled(
-                        prefexIcon: Icon(Icons.lock),
-                        textOftextField: 'Password',
-                      ),
-                    ),
+                        padding: EdgeInsets.only(
+                          top: 2.dm,
+                          bottom: 0.dm,
+                          left: 20.dm,
+                          right: 20.dm,
+                        ),
+                        child:
+                            null /*  const CsutomTextFiled(
+                  prefexIcon: Icon(Icons.lock),
+                  textOftextField: 'Password',
+                ), */
+                        ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [

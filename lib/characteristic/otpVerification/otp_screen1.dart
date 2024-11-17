@@ -38,12 +38,13 @@ class OtpScreen1 extends StatelessWidget {
                   height: 90.h,
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0.dg),
-                  child: const CsutomTextFiled(
-                    prefexIcon: Icon(Icons.phone),
-                    textOftextField: 'Phone number',
-                  ),
-                ),
+                    padding: EdgeInsets.all(8.0.dg),
+                    child:
+                        null /*  const CsutomTextFiled(
+                  prefexIcon: Icon(Icons.lock),
+                  textOftextField: 'Password',
+                ), */
+                    ),
                 SizedBox(
                   height: 100.h,
                 ),

@@ -1,12 +1,16 @@
 import 'package:eshtry_meny/EshtryMeny.dart';
-import 'package:eshtry_meny/characteristic/signup/data/models/signup_request.dart';
-import 'package:eshtry_meny/shared/networking/api_services.dart';
-import 'package:eshtry_meny/shared/networking/dio_refactory.dart';
+import 'package:eshtry_meny/shared/di/dependency_injection.dart';
+
 import 'package:eshtry_meny/shared/routing/app_routes.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
-  final dio = DioFactory.getDio();
+  setUpGetIt();
+  runApp(EshtryMeny(
+    appRouter: AppRoutes(),
+  ));
+}
+/* final dio = DioFactory.getDio();
 
   // Create an instance of ApiServices
   final apiService = ApiServices(dio);
@@ -28,8 +32,4 @@ void main() async {
     print("Response: ${response.message}");
   } catch (e) {
     print("Error: $e");
-  }
-  runApp(EshtryMeny(
-    appRouter: AppRoutes(),
-  ));
-}
+  } */

@@ -1,6 +1,6 @@
 import 'package:eshtry_meny/shared/networking/error_handling.dart';
+import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-
 part 'api_results.freezed.dart';
 
 @Freezed()

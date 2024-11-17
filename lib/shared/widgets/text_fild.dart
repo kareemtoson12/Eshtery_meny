@@ -9,15 +9,20 @@ import '../styles/styles.dart';
 class CsutomTextFiled extends StatelessWidget {
   final prefexIcon;
   final String textOftextField;
-  const CsutomTextFiled({
+  final Function(String?) validator;
+  final TextEditingController controller;
+  CsutomTextFiled({
     super.key,
+    required this.validator,
     required this.prefexIcon,
     required this.textOftextField,
+    required this.controller,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: controller,
       decoration: InputDecoration(
         prefixIcon: prefexIcon,
         hintText: textOftextField,

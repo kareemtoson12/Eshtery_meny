@@ -5,15 +5,17 @@ import 'package:eshtry_meny/shared/networking/api_services.dart';
 import 'package:eshtry_meny/shared/networking/error_handling.dart';
 
 class SignupRepo {
-  final ApiServices _apiServices;
-  SignupRepo(this._apiServices);
+  final ApiServices apiServices;
+  SignupRepo(this.apiServices);
   Future<ApiResult<SignUpResponse>> signup(
       SignupRequestBody signupRequestBody) async {
     try {
-      final response = await _apiServices.signUp(signupRequestBody);
+      final response = await apiServices.signUp(signupRequestBody);
       return ApiResult.success(response);
     } catch (errro) {
-      return ApiResult.failure(ErrorHandler.handle(errro));
+      return ApiResult.failure(
+        ErrorHandler.handle(errro),
+      );
     }
   }
 }
